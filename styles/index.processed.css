@@ -1,0 +1,151 @@
+/**
+ * index.scss
+ * - Add any styles you want here!
+ */
+body {
+  background: #f5f5f5;
+}
+
+.h-body img {
+  width: 100%;
+}
+
+.float-heart {
+  position: fixed;
+  z-index: 2;
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  bottom: -60px;
+  right: 15px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: bottom 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.compare-card {
+  position: fixed;
+  bottom: 0;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding: 0 16px;
+  left: 0;
+  right: 0;
+  height: 50vh;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.19), 0 -6px 6px rgba(0, 0, 0, 0.23);
+  transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: space-between;
+  align-items: flex-start;
+}
+
+.compare-title {
+  margin-bottom: 8px;
+  border-bottom: 1px solid #bdbdbd;
+  padding-bottom: 8px;
+  width: 100%;
+}
+
+.compare-title h5 {
+  font-size: 16px;
+  color: #0077cc;
+  line-height: 24px;
+  margin: 4px 0 0;
+}
+
+.compare-title p {
+  margin: 0;
+}
+
+.compare-list-wrapper {
+  position: relative;
+  flex: 1 1 auto;
+  overflow: auto;
+  transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  width: 100%;
+}
+
+.compare-list-wrapper .compare-list {
+  box-sizing: border-box;
+  overflow: auto;
+  padding: 0 0 8px;
+}
+
+.compare-list-wrapper .compare-list img {
+  width: 100%;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.menu-chip {
+  height: 8px;
+  width: 20px;
+  display: block;
+  padding: 4px 30%;
+  margin: auto;
+  position: relative;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.menu-chip .left-bar,
+.menu-chip .right-bar {
+  position: absolute;
+  background-color: #ccc;
+  height: 3px;
+  width: 13px;
+  top: 12px;
+  left: 50%;
+  transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.menu-chip .left-bar {
+  margin-left: -10px;
+  transform: rotate(35deg);
+  border-radius: 6px 10px 10px 6px;
+}
+
+.menu-chip .right-bar {
+  transform: rotate(-35deg);
+  border-radius: 10px 6px 6px 10px;
+}
+
+.card-closed .compare-card {
+  transform: translateY(60vh);
+}
+
+.card-closed .float-heart {
+  bottom: 15px;
+}
+
+.card-maximized .compare-card {
+  height: 98vh;
+}
+
+.card-maximized .compare-card .maximizeCta {
+  display: none;
+}
+
+.card-minimized .compare-card {
+  transform: translateY(39vh);
+}
+
+.card-minimized .menu-chip .left-bar {
+  transform-origin: center center;
+  transform: rotate(0);
+}
+
+.card-minimized .menu-chip .right-bar {
+  transform-origin: center center;
+  transform: rotate(0);
+}
+
+.card-open .compare-card {
+  height: 50vh;
+}
