@@ -11,7 +11,7 @@ var $maxCTA = $('.maximizeCta');
 var cardState = 'card-closed';
 
 
-/* 
+
 
 //Draggable thingy 
 
@@ -62,7 +62,6 @@ function draggingCardOnMove(e){
    }
 }
 
-*/
 
 
 
